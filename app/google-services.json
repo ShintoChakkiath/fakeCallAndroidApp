@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "530120307882",
+    "firebase_url": "https://master-call-prank.firebaseio.com",
+    "project_id": "master-call-prank",
+    "storage_bucket": "master-call-prank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530120307882:android:368dc82da4dc9928",
+        "android_client_info": {
+          "package_name": "com.GoldenApp.fakecall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "530120307882-a5oj66utgqerkdhj36o9pp56j9b4q1fo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIZrpAnqMltTYUsOpLQIOTxWJsSia_ozI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

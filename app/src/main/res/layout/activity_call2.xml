@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/caller_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/person" />
+
+    <TextView
+        android:id="@+id/caller_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/caller_image"
+        android:layout_marginTop="33dp"
+        android:gravity="center"
+        android:text="Girl Friend"
+        android:textColor="#ffffffff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/caller_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/caller_name"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="03036666172"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/calling"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/gif_answer"
+            android:layout_alignLeft="@+id/gif_answer"
+            android:layout_marginBottom="26dp"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_message_black_24dp"
+            android:text="Message" />
+
+        <ImageView
+            android:id="@+id/gif_answer"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="31dp"
+            android:layout_marginLeft="62dp"
+            android:background="@drawable/call_pick"
+            android:onClick="reciveCall" />
+
+        <ImageView
+            android:id="@+id/gif_reject"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/gif_answer"
+            android:layout_marginRight="62dp"
+            android:background="@drawable/callend_icon"
+            android:onClick="rejectCall"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/gif_reject"
+            android:layout_alignLeft="@id/gif_reject"
+            android:layout_marginBottom="26dp"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_alarm_black_24dp"
+            android:text="Reminder" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_in_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="IN CALL"
+        android:textColor="#ffffffff"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:text="00:00"
+        android:textColor="#ffffffff"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/attend"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/hold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/mute"
+            android:layout_alignTop="@+id/calender"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_phone_paused_black_24dp"
+            android:text="Hold" />
+
+        <TextView
+            android:id="@+id/calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/mute"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="20dp"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_perm_contact_calendar_black_24dp"
+            android:paddingLeft="40dp"
+            android:text="Calender" />
+
+        <TextView
+            android:id="@+id/note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/calender"
+            android:layout_alignBottom="@id/calender"
+            android:layout_alignLeft="@+id/contacts"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_note_add_black_24dp"
+            android:text="Notepad" />
+
+        <TextView
+            android:id="@+id/addcall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/calender"
+            android:layout_centerVertical="true"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/addcall"
+            android:text="Add Call" />
+
+        <TextView
+            android:id="@+id/contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/addcall"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_person_pin_black_24dp"
+            android:paddingRight="40dp"
+            android:text="Contacts" />
+
+        <TextView
+            android:id="@+id/mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/addcall"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/ic_mic_black_24dp"
+            android:text="Mute" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="11dp">
+
+            <ImageView
+                android:id="@+id/dailpad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/speaker"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/speaker"
+                android:paddingRight="50dp"
+                android:src="@drawable/ic_dialpad_black_24dp" />
+
+            <ImageView
+                android:id="@+id/speaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:onClick="OnClickSpeaker"
+                android:paddingLeft="50dp"
+                android:src="@drawable/ic_speaker_black_24dp" />
+
+            <ImageView
+                android:id="@+id/end_call"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="endCall"
+                android:paddingTop="3dp"
+                android:src="@drawable/end_call" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
